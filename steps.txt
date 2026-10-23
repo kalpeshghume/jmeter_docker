@@ -1,0 +1,27 @@
+====================To get Prometheus plugin==========
+wget -O jmeter-plugins-prometheus-0.6.0.jar https://repo1.maven.org/maven2/com/github/johrstrom/jmeter-prometheus-plugin/0.6.0/jmeter-prometheus-plugin-0.6.0.jar
+
+
+
+====================To set up network=================
+docker network create jmeter-metrics-net
+
+
+====================Running Prometheus================
+
+docker run -d \
+  --name prometheus \
+  --network host \
+  -v $(pwd)/prometheus.yml:/etc/prometheus/prometheus.yml \
+  prom/prometheus:latest
+
+
+=================Running Jmeter======================
+docker run --rm \
+  --name jmeter \
+  --network host \
+  -v $(pwd)/jmeter-plugins-prometheus-0.6.0.jar:/opt/apache-jmeter-5.5/lib/ext/jmeter-plugins-prometheus-0.6.0.jar \
+  -v $(pwd):/test \
+  -w /test \
+  justb4/jmeter:5.5 -n -t /test/PET/PetStore-End-to-End-Flow.jmx -l /test/results.jtl
+
