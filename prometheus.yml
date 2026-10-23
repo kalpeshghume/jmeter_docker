@@ -1,0 +1,14 @@
+global:
+  scrape_interval: 5s # Scrape data every 5 seconds for real-time load test metrics
+
+scrape_configs:
+  # 1. Prometheus monitoring itself
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # 2. Prometheus monitoring your JMeter container
+  - job_name: 'jmeter'
+    static_configs:
+      - targets: ['jmeter:9270'] # 'jmeter' is the container name we will use next
+

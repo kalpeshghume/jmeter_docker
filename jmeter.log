@@ -1,0 +1,125 @@
+2026-10-23 09:22:46,857 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2026-10-23 09:22:46,880 INFO o.a.j.JMeter: Loading user properties from: /opt/apache-jmeter-5.5/bin/user.properties
+2026-10-23 09:22:46,881 INFO o.a.j.JMeter: Loading system properties from: /opt/apache-jmeter-5.5/bin/system.properties
+2026-10-23 09:22:46,881 INFO o.a.j.JMeter: Setting System property: log4j2.formatMsgNoLookups=true
+2026-10-23 09:22:46,896 INFO o.a.j.JMeter: Copyright (c) 1998-2022 The Apache Software Foundation
+2026-10-23 09:22:46,897 INFO o.a.j.JMeter: Version 5.5
+2026-10-23 09:22:46,897 INFO o.a.j.JMeter: java.version=1.8.0_275
+2026-10-23 09:22:46,897 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2026-10-23 09:22:46,897 INFO o.a.j.JMeter: os.name=Linux
+2026-10-23 09:22:46,898 INFO o.a.j.JMeter: os.arch=amd64
+2026-10-23 09:22:46,898 INFO o.a.j.JMeter: os.version=6.8.0-1064-azure
+2026-10-23 09:22:46,898 INFO o.a.j.JMeter: file.encoding=UTF-8
+2026-10-23 09:22:46,899 INFO o.a.j.JMeter: java.awt.headless=true
+2026-10-23 09:22:46,899 INFO o.a.j.JMeter: Max memory     =4831838208
+2026-10-23 09:22:46,899 INFO o.a.j.JMeter: Available Processors =2
+2026-10-23 09:22:46,910 INFO o.a.j.JMeter: Default Locale=English (EN)
+2026-10-23 09:22:46,911 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2026-10-23 09:22:46,911 INFO o.a.j.JMeter: JMeterHome=/opt/apache-jmeter-5.5
+2026-10-23 09:22:46,912 INFO o.a.j.JMeter: user.dir  =/test
+2026-10-23 09:22:46,912 INFO o.a.j.JMeter: PWD       =/test
+2026-10-23 09:22:46,913 INFO o.a.j.JMeter: IP: 172.17.0.2 Name: 28e5f2584c57 FullName: 28e5f2584c57
+2026-10-23 09:22:46,945 INFO o.a.j.s.FileServer: Default base='/test'
+2026-10-23 09:22:46,947 INFO o.a.j.s.FileServer: Set new base='/test/PET'
+2026-10-23 09:22:47,133 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2026-10-23 09:22:47,164 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2026-10-23 09:22:47,172 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2026-10-23 09:22:47,182 INFO o.a.j.s.SaveService: Loading file: /test/PET/PetStore-End-to-End-Flow.jmx
+2026-10-23 09:22:47,221 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
+2026-10-23 09:22:47,225 INFO o.a.j.p.h.c.CacheManager: Will only cache the following methods: [GET]
+2026-10-23 09:22:47,255 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-10-23 09:22:47,255 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-10-23 09:22:47,255 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-10-23 09:22:47,256 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-10-23 09:22:47,256 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2026-10-23 09:22:47,256 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2026-10-23 09:22:48,518 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2026-10-23 09:22:48,519 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /opt/apache-jmeter-5.5/bin/proxyserver.jks
+2026-10-23 09:22:48,539 INFO o.a.j.JMeter: Creating summariser <summary>
+2026-10-23 09:22:48,552 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2026-10-23 09:22:48,553 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-10-23 09:22:48,553 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-10-23 09:22:48,559 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2026-10-23 09:22:48,560 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2026-10-23 09:22:49,053 INFO o.a.j.JMeter: Running test (1792740169053)
+2026-10-23 09:22:49,150 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2026-10-23 09:22:49,151 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2026-10-23 09:22:49,153 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-10-23 09:22:49,156 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=10 delayedStart=false
+2026-10-23 09:22:49,175 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2026-10-23 09:22:49,175 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2026-10-23 09:22:49,195 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2026-10-23 09:22:49,196 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2026-10-23 09:22:49,198 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2026-10-23 09:22:49,200 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2026-10-23 09:22:49,205 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2026-10-23 09:22:49,208 INFO o.a.j.s.FileServer: Stored: data/products.csv
+2026-10-23 09:22:49,234 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = 28e5f2584c57
+2026-10-23 09:22:49,240 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2026-10-23 09:22:49,489 INFO o.a.j.p.h.s.h.LazyLayeredConnectionSocketFactory: Setting up HTTPS TrustAll Socket Factory
+2026-10-23 09:22:49,500 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2026-10-23 09:22:49,501 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2026-10-23 09:22:49,798 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
+2026-10-23 09:22:49,803 INFO o.a.j.u.SSLManager: KeyStore created OK
+2026-10-23 09:22:49,803 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
+2026-10-23 09:22:50,703 INFO o.a.j.p.h.p.BaseParser: Created org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-10-23 09:22:50,813 INFO o.a.j.p.h.s.ResourcesDownloader: Creating ResourcesDownloader with keepalive_inseconds : 60
+2026-10-23 09:22:51,021 INFO o.a.j.p.h.p.BaseParser: Created org.apache.jmeter.protocol.http.parser.CssParser
+2026-10-23 09:22:51,456 WARN c.h.c.r.e.LoggingCSSParseErrorHandler: Browser compliant mode skipped CSS from [174:2] starting at token '
+
+ ' until [177:1] to token '}' (based on com.helger.css.parser.ParseException: Encountered unexpected token: "{" "{"
+    at line 176, column 2.
+
+Was expecting one of:
+
+    "*"
+    "-->"
+    "."
+    ":"
+    ":not("
+    ";"
+    "<!--"
+    "@bottom-center"
+    "@bottom-left"
+    "@bottom-left-corner"
+    "@bottom-right"
+    "@bottom-right-corner"
+    "@charset"
+    "@footnote"
+    "@import"
+    "@left-bottom"
+    "@left-middle"
+    "@left-top"
+    "@media"
+    "@namespace"
+    "@page"
+    "@right-bottom"
+    "@right-middle"
+    "@right-top"
+    "@supports"
+    "@top-center"
+    "@top-left"
+    "@top-left-corner"
+    "@top-right"
+    "@top-right-corner"
+    "["
+    "|"
+    "}"
+    <AT_UNKNOWN>
+    <EOF>
+    <FONTFACE_SYM>
+    <HASH>
+    <IDENT>
+    <KEYFRAMES_SYM>
+    <PERCENTAGE>
+    <S>
+    <UNKNOWN>
+    <VIEWPORT_SYM>
+)
+2026-10-23 09:22:53,037 INFO o.a.j.e.J.JSR223 PostProcessor: Total is 33.00
+2026-10-23 09:22:54,412 INFO o.a.j.p.j.s.J.Order Validation: Order number is 521631
+2026-10-23 09:23:06,358 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2026-10-23 09:23:06,358 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2026-10-23 09:23:06,362 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2026-10-23 09:23:06,362 INFO o.a.j.s.FileServer: Close: data/products.csv
+2026-10-23 09:23:06,367 INFO o.a.j.r.Summariser: summary =      1 in 00:00:17 =    0.1/s Avg:   850 Min:   850 Max:   850 Err:     0 (0.00%)
