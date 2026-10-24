@@ -10,5 +10,5 @@ scrape_configs:
   # 2. Prometheus monitoring your JMeter container
   - job_name: 'jmeter'
     static_configs:
-      - targets: ['127.0.0.1:9270:9270'] # 'jmeter' is the container name we will use next
+      - targets: ['127.0.0.1:9270'] # 'jmeter' is the container name we will use next
 
