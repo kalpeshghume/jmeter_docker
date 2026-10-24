@@ -30,3 +30,23 @@ docker run --rm \
   -w /test \
   justb4/jmeter:5.5 -n -t /test/PET/PetStore-End-to-End-Flow.jmx -l /test/results.jtl
 
+================Running Jmeter=======================
+docker run --rm \
+  --name jmeter \
+  --network host \
+  -v $(pwd)/jmeter-plugins-prometheus-0.6.0.jar:/opt/apache-jmeter-5.5/lib/ext/jmeter-plugins-prometheus-0.6.0.jar \
+  -v $(pwd):/test \
+  -w /test \
+  justb4/jmeter:5.5 -n -t /test/API/API_Test.jmx -l /test/API/results.jtl -j /test/API/jmeter.log 
+
+
+=================Running Grafana=====================
+
+docker run -d \
+  --name grafana \
+  --network host \
+  -v grafana-data:/var/lib/grafana \
+  grafana/grafana:latest
+
+
+
