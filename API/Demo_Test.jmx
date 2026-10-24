@@ -147,7 +147,7 @@
         </TransactionController>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Users_Test_Data">
-            <stringProp name="filename">C:/Users/KGHUME/Downloads/Software/JMETER_SCRIPTS/user_test_data.csv</stringProp>
+            <stringProp name="filename">Test_Data/user_test_data.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">user_id</stringProp>
             <boolProp name="ignoreFirstLine">true</boolProp>
@@ -189,7 +189,7 @@
         </TransactionController>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
-            <stringProp name="filename">C:/Users/KGHUME/Downloads/Software/JMETER_SCRIPTS/product_test_data.csv</stringProp>
+            <stringProp name="filename">Test_data/product_test_data.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">product_id</stringProp>
             <boolProp name="ignoreFirstLine">true</boolProp>
