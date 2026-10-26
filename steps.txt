@@ -37,8 +37,11 @@ docker run --rm \
   -v $(pwd)/jmeter-plugins-prometheus-0.6.0.jar:/opt/apache-jmeter-5.5/lib/ext/jmeter-plugins-prometheus-0.6.0.jar \
   -v $(pwd):/test \
   -w /test \
-  justb4/jmeter:5.5 -n -t /test/API/API_Test.jmx -l /test/API/results.jtl -j /test/API/jmeter.log 
-
+  justb4/jmeter:5.5 -n \
+  -Dprometheus.ip=0.0.0.0 \
+  -t /test/API/API_Test.jmx \
+  -l "/test/API/Results/result_$(date +%Y%m%d_%H%M%S).jtl" \
+  -j "/test/API/Results/jmeter_$(date +%Y%m%d_%H%M%S).log"
 
 =================Running Grafana=====================
 
