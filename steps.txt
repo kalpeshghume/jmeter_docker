@@ -1,6 +1,12 @@
 ====================To get Prometheus plugin==========
 wget -O jmeter-plugins-prometheus-0.6.0.jar https://repo1.maven.org/maven2/com/github/johrstrom/jmeter-prometheus-plugin/0.6.0/jmeter-prometheus-plugin-0.6.0.jar
 
+
+
+====================To stop & kill all containers======
+
+docker stop $(docker ps -aq) && docker rm $(docker ps -aq)
+
 ====================TO kill jmeter gracefully=======
 docker exec -it jmeter sh -c '$(find / -name shutdown.sh -print -quit)'
 
