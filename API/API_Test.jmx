@@ -5,6 +5,8 @@
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
         <collectionProp name="Arguments.arguments"/>
       </elementProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
     </TestPlan>
     <hashTree>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
@@ -22,7 +24,7 @@
         </collectionProp>
       </Arguments>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
         <intProp name="ThreadGroup.num_threads">10</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
         <longProp name="ThreadGroup.duration">300</longProp>
@@ -141,12 +143,12 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Get_Users">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Get_Users" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Users_Test_Data">
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Users_Test_Data" enabled="true">
             <stringProp name="filename">Test_Data/user_test_data.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">user_id</stringProp>
@@ -171,7 +173,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="49586">200</stringProp>
               </collectionProp>
@@ -188,7 +190,7 @@
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
             <stringProp name="filename">Test_Data/product_test_data.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">product_id</stringProp>
@@ -213,7 +215,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="49586">200</stringProp>
               </collectionProp>
@@ -303,7 +305,7 @@
           <collectionProp name="prometheus.collector_definitions">
             <elementProp name="" elementType="com.github.johrstrom.listener.ListenerCollectorConfig">
               <stringProp name="collector.help">Resposne Time</stringProp>
-              <stringProp name="collector.metric_name">jmeter_rt</stringProp>
+              <stringProp name="collector.metric_name">my_jmeter_rt</stringProp>
               <stringProp name="collector.type">SUMMARY</stringProp>
               <collectionProp name="collector.labels">
                 <stringProp name="73174740">Label</stringProp>
@@ -314,33 +316,56 @@
             </elementProp>
             <elementProp name="" elementType="com.github.johrstrom.listener.ListenerCollectorConfig">
               <stringProp name="collector.help">Total Number Of Requestes</stringProp>
-              <stringProp name="collector.metric_name">jmeter_count_total</stringProp>
+              <stringProp name="collector.metric_name">my_jmeter_count_total</stringProp>
               <stringProp name="collector.type">COUNTER</stringProp>
               <collectionProp name="collector.labels">
                 <stringProp name="73174740">Label</stringProp>
+                <stringProp name="3059181">code</stringProp>
               </collectionProp>
               <stringProp name="collector.quantiles_or_buckets"></stringProp>
               <stringProp name="listener.collector.measuring">CountTotal</stringProp>
+              <stringProp name="listener.collector.listen_to">samples</stringProp>
             </elementProp>
             <elementProp name="" elementType="com.github.johrstrom.listener.ListenerCollectorConfig">
               <stringProp name="collector.help">Total Number of Passed Requestes</stringProp>
-              <stringProp name="collector.metric_name">jmeter_count_passed</stringProp>
+              <stringProp name="collector.metric_name">my_jmeter_count_passed</stringProp>
               <stringProp name="collector.type">COUNTER</stringProp>
               <collectionProp name="collector.labels">
                 <stringProp name="73174740">Label</stringProp>
+                <stringProp name="3059181">code</stringProp>
               </collectionProp>
               <stringProp name="collector.quantiles_or_buckets"></stringProp>
               <stringProp name="listener.collector.measuring">SuccessTotal</stringProp>
             </elementProp>
             <elementProp name="" elementType="com.github.johrstrom.listener.ListenerCollectorConfig">
               <stringProp name="collector.help">Total Number of Failed Requestes</stringProp>
-              <stringProp name="collector.metric_name">jmeter_count_failed</stringProp>
+              <stringProp name="collector.metric_name">my_jmeter_count_failed</stringProp>
               <stringProp name="collector.type">COUNTER</stringProp>
               <collectionProp name="collector.labels">
                 <stringProp name="73174740">Label</stringProp>
+                <stringProp name="3059181">code</stringProp>
               </collectionProp>
               <stringProp name="collector.quantiles_or_buckets"></stringProp>
               <stringProp name="listener.collector.measuring">FailureTotal</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="com.github.johrstrom.listener.ListenerCollectorConfig">
+              <stringProp name="collector.help">Response time as hostogram</stringProp>
+              <stringProp name="collector.metric_name">my_jmeter_rt_histogram</stringProp>
+              <stringProp name="collector.type">HISTOGRAM</stringProp>
+              <collectionProp name="collector.labels">
+                <stringProp name="73174740">Label</stringProp>
+              </collectionProp>
+              <stringProp name="collector.quantiles_or_buckets">100,500,1000,3000</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="com.github.johrstrom.listener.ListenerCollectorConfig">
+              <stringProp name="collector.help">Latency</stringProp>
+              <stringProp name="collector.metric_name">my_jmeter_latency</stringProp>
+              <stringProp name="collector.type">HISTOGRAM</stringProp>
+              <collectionProp name="collector.labels">
+                <stringProp name="102727412">label</stringProp>
+              </collectionProp>
+              <stringProp name="collector.quantiles_or_buckets">100,500,1000,3000</stringProp>
+              <stringProp name="listener.collector.measuring">Latency</stringProp>
             </elementProp>
           </collectionProp>
         </com.github.johrstrom.listener.PrometheusListener>
