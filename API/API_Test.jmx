@@ -305,7 +305,7 @@
           <collectionProp name="prometheus.collector_definitions">
             <elementProp name="" elementType="com.github.johrstrom.listener.ListenerCollectorConfig">
               <stringProp name="collector.help">Resposne Time</stringProp>
-              <stringProp name="collector.metric_name">my_jmeter_rt</stringProp>
+              <stringProp name="collector.metric_name">jmeter_rt</stringProp>
               <stringProp name="collector.type">SUMMARY</stringProp>
               <collectionProp name="collector.labels">
                 <stringProp name="73174740">Label</stringProp>
@@ -316,7 +316,7 @@
             </elementProp>
             <elementProp name="" elementType="com.github.johrstrom.listener.ListenerCollectorConfig">
               <stringProp name="collector.help">Total Number Of Requestes</stringProp>
-              <stringProp name="collector.metric_name">my_jmeter_count_total</stringProp>
+              <stringProp name="collector.metric_name">jmeter_count_total</stringProp>
               <stringProp name="collector.type">COUNTER</stringProp>
               <collectionProp name="collector.labels">
                 <stringProp name="73174740">Label</stringProp>
@@ -328,7 +328,7 @@
             </elementProp>
             <elementProp name="" elementType="com.github.johrstrom.listener.ListenerCollectorConfig">
               <stringProp name="collector.help">Total Number of Passed Requestes</stringProp>
-              <stringProp name="collector.metric_name">my_jmeter_count_passed</stringProp>
+              <stringProp name="collector.metric_name">jmeter_count_passed</stringProp>
               <stringProp name="collector.type">COUNTER</stringProp>
               <collectionProp name="collector.labels">
                 <stringProp name="73174740">Label</stringProp>
@@ -339,7 +339,7 @@
             </elementProp>
             <elementProp name="" elementType="com.github.johrstrom.listener.ListenerCollectorConfig">
               <stringProp name="collector.help">Total Number of Failed Requestes</stringProp>
-              <stringProp name="collector.metric_name">my_jmeter_count_failed</stringProp>
+              <stringProp name="collector.metric_name">jmeter_count_failed</stringProp>
               <stringProp name="collector.type">COUNTER</stringProp>
               <collectionProp name="collector.labels">
                 <stringProp name="73174740">Label</stringProp>
@@ -349,48 +349,28 @@
               <stringProp name="listener.collector.measuring">FailureTotal</stringProp>
             </elementProp>
             <elementProp name="" elementType="com.github.johrstrom.listener.ListenerCollectorConfig">
-              <stringProp name="collector.help">Response time as hostogram</stringProp>
-              <stringProp name="collector.metric_name">my_jmeter_rt_histogram</stringProp>
+              <stringProp name="collector.help">default help string</stringProp>
+              <stringProp name="collector.metric_name">jmeter_latency</stringProp>
               <stringProp name="collector.type">HISTOGRAM</stringProp>
               <collectionProp name="collector.labels">
                 <stringProp name="73174740">Label</stringProp>
               </collectionProp>
               <stringProp name="collector.quantiles_or_buckets">100,500,1000,3000</stringProp>
+              <stringProp name="listener.collector.measuring">Latency</stringProp>
             </elementProp>
             <elementProp name="" elementType="com.github.johrstrom.listener.ListenerCollectorConfig">
-              <stringProp name="collector.help">Latency</stringProp>
-              <stringProp name="collector.metric_name">my_jmeter_latency</stringProp>
-              <stringProp name="collector.type">HISTOGRAM</stringProp>
-              <collectionProp name="collector.labels">
-                <stringProp name="102727412">label</stringProp>
-              </collectionProp>
-              <stringProp name="collector.quantiles_or_buckets">100,500,1000,3000</stringProp>
-              <stringProp name="listener.collector.measuring">Latency</stringProp>
+              <stringProp name="collector.help">default help string</stringProp>
+              <stringProp name="collector.metric_name">jmeter_success_ratio</stringProp>
+              <stringProp name="collector.type">SUCCESS_RATIO</stringProp>
+              <collectionProp name="collector.labels"/>
+              <stringProp name="collector.quantiles_or_buckets"></stringProp>
+              <stringProp name="listener.collector.measuring">SuccessRatio</stringProp>
             </elementProp>
           </collectionProp>
         </com.github.johrstrom.listener.PrometheusListener>
         <hashTree/>
         <com.github.johrstrom.config.PrometheusMetricsConfig guiclass="com.github.johrstrom.config.gui.PrometheusMetricsConfigGui" testclass="com.github.johrstrom.config.PrometheusMetricsConfig" testname="Prometheus Metrics" enabled="true">
-          <collectionProp name="prometheus.collector_definitions">
-            <elementProp name="" elementType="com.github.johrstrom.collector.BaseCollectorConfig">
-              <stringProp name="collector.help">default help string</stringProp>
-              <stringProp name="collector.metric_name">jmeter_rt</stringProp>
-              <stringProp name="collector.type">COUNTER</stringProp>
-              <collectionProp name="collector.labels">
-                <stringProp name="73174740">Label</stringProp>
-              </collectionProp>
-              <stringProp name="collector.quantiles_or_buckets">0.75,0.5|0.95,0.1|0.99,0.01</stringProp>
-            </elementProp>
-            <elementProp name="" elementType="com.github.johrstrom.collector.BaseCollectorConfig">
-              <stringProp name="collector.help">default help string</stringProp>
-              <stringProp name="collector.metric_name">jmeter_status_code</stringProp>
-              <stringProp name="collector.type">COUNTER</stringProp>
-              <collectionProp name="collector.labels">
-                <stringProp name="65298671">Count</stringProp>
-              </collectionProp>
-              <stringProp name="collector.quantiles_or_buckets"></stringProp>
-            </elementProp>
-          </collectionProp>
+          <collectionProp name="prometheus.collector_definitions"/>
         </com.github.johrstrom.config.PrometheusMetricsConfig>
         <hashTree/>
         <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="false">
